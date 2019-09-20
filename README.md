@@ -8,7 +8,7 @@ ulmo -- for downloading ncdc climate data
 downloads ncdc station data (high/low temp, wind, precip, snow) into pandas dataframes
 
 ### what will it eventually do?
--pretty plots of the data
--record highs/lows
--annual averages and summaries
--long-term variability/climate change
+* pretty plots of the data
+* record highs/lows
+* annual averages and summaries
+* long-term variability/climate change
