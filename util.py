@@ -2,6 +2,7 @@
 Climate utility functions
 """
 
+import pandas as pd
 
 def get_config(config_path):
     """
@@ -21,4 +22,18 @@ def get_config(config_path):
         raise
 
     return config_dict
+
+
+def load_pdo():
+    """
+    load monthly pdo dataset
+    stored in archive directory, available here: https://www.ncdc.noaa.gov/teleconnections/pdo/
+    :return: Pandas series of pdo
+    """
+    df = pd.read_csv('./archive/pdo_monthly.csv')
+    pdo = pd.DataFrame(index = pd.to_datetime(df['yyyymm'], format='%Y%m'), columns=['pdo'])
+    pdo['pdo'] = df.pdo.values
+    return pdo
+
+
 
