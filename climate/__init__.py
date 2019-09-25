@@ -1,0 +1,5 @@
+"""
+Initialize climate
+"""
+
+import util
