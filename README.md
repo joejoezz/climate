@@ -19,4 +19,4 @@ Example for Seattle:
 1. Print metadata: `find_sites.py -s wa -n seattle`
 2. Update config file (`sites.conf`) with metadata
 3. Download data: `getData.py ../sites.conf`
-4. Update and run `makePlots.py`
+4. Update and run `engines.py`
