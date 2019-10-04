@@ -110,14 +110,15 @@ def histogram_plot_engine(site, variable, month, subset_label):
     # ---- EVENTUALLY CHECK DATA SIZE HERE -----
     histogram.plot_histogram(site, df_ref[variable].dropna().values, df_new[variable].dropna().values,
                              label1=label1, label2=label2, subset_label=subset_label, variable=variable)
+    return
 
 
 # code to run the regular histogram plotting part
 for site in sites:
     for variable in variables:
-        for month in months:
-           subset_label = subset_labels[int(months-1)]
-           histogram_plot_engine(site, variable, month, subset_label)
+        for month in months:  
+            subset_label = subset_labels[int(month)-1]
+            histogram_plot_engine(site, variable, month, subset_label)
 
 
 # code to run the 2d histogram part
