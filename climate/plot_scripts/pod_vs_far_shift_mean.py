@@ -20,6 +20,7 @@ config = get_config('../sites.conf')
 def get_gev_fit(data):
     """
     Tries GEV fits with several loc parameters, selects the best one
+    MIGHT BE DIFFERENT THAN OTHER SCRIPT--BE CAREFUL
     """
     md = mode(data)[0][0]
     std = np.std(data)

@@ -20,6 +20,7 @@ def get_gev_fit(data):
     """
     Tries GEV fits with several loc parameters, selects the best one
     BUG--doesn't always fit well. Might be related to x-range (needs to be wide enough to catch extremes)
+    This also needs to get moved to UTIL eventually 
     """
     md = mode(data)[0][0]
     std = np.std(data)
